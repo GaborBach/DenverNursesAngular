@@ -11,13 +11,10 @@ export class JobsComponent implements OnInit {
   jobs = JOBRESULTS;
   selectedJob: JobResult;
   
-  constructor() { 
-
-
+  constructor() {
   }
 
-  ngOnInit() { 
-
+  ngOnInit() {
   }
 
   
