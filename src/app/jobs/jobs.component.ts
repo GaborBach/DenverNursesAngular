@@ -10,14 +10,9 @@ import { JOBRESULTS } from '../mock-jobs';
 export class JobsComponent implements OnInit {
   jobs = JOBRESULTS;
   selectedJob: JobResult;
-  
   constructor() {
   }
 
   ngOnInit() {
   }
-
-  
-
-  
 }

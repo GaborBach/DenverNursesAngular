@@ -1,17 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { JobResult } from './jobResults';
-import { JOBRESULTS } from './mock-jobs';
+// import { JOBRESULTS } from './mock-jobs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class JobService {
 
-  constructor() { }
+  private jobsUrl = 'api/jobs';  // URL to web api
 
-  getHeroes(): Observable<JobResult[]> {
-    // TODO: send the message _after_ fetching the heroes
-    return of(JOBRESULTS);
-  }
+  constructor(
+    private http: HttpClient
+  ) { }
+
+
+
+  /** GET jobs from the server */
+  // getJobs (): Observable<JobResult[]> {
+  //   return this.http.get<JobResult[]>(this.jobsUrl);
+  // }
 }

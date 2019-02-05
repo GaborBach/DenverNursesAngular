@@ -16,8 +16,8 @@ export class JobResult {
     jobkey: string;
     sponsored: boolean;
     expired: boolean;
-    indeedApply: boolean; 
+    indeedApply: boolean;
     formattedLocationFull: string;
-    formattedRelativeTime: string; 
-    stations: string; 
+    formattedRelativeTime: string;
+    stations: string;
 }
