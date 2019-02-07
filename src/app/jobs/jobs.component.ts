@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JobResult } from '../jobResults';
-import { JOBRESULTS } from '../mock-jobs';
+import { JobService } from '../job.service';
 
 @Component({
   selector: 'app-jobs',
@@ -8,11 +8,18 @@ import { JOBRESULTS } from '../mock-jobs';
   styleUrls: ['./jobs.component.sass']
 })
 export class JobsComponent implements OnInit {
-  jobs = JOBRESULTS;
-  selectedJob: JobResult;
-  constructor() {
-  }
+
+  jobResults: JobResult[];
+
+
+  constructor(private jobService: JobService) {}
 
   ngOnInit() {
+    this.getJobs();
+  }
+
+  getJobs(): void {
+    this.jobService.getJobs()
+    .subscribe(jobResults => this.jobResults = jobResults);
   }
 }

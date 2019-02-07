@@ -1,23 +1,25 @@
-<p *ngFor="let job of jobs">
-  {{ job.jobtitle }}<br />
-  {{ job.company }}<br />
-  {{ job.city }}<br />
-  {{ job.state }}<br />
-  {{ job.country }}<br />
-  {{ job.language }}<br />
-  {{ job.formattedLocation }}<br />
-  {{ job.source }}<br />
-  {{ job.date }}<br />
-  {{ job.snippet }}<br />
-  {{ job.url }}<br />
-  {{ job.onmousedown }}<br />
-  {{ job.latitude }}<br />
-  {{ job.longitude }}<br />
-  {{ job.jobkey }}<br />
-  {{ job.sponsored }}<br />
-  {{ job.expired }}<br />
-  {{ job.indeedApply }}<br />
-  {{ job.formattedLocationFull }}<br />
-  {{ job.formattedRelativeTime }}<br />
-  {{ job.stations }}<br />
+<h3>Jobs</h3>
+
+<p *ngFor="let jobResults of jobResults">
+  {{ jobResults.jobtitle }}<br />
+  {{ jobResults.company }}<br />
+  {{ jobResults.city }}<br />
+  {{ jobResults.state }}<br />
+  {{ jobResults.country }}<br />
+  {{ jobResults.language }}<br />
+  {{ jobResults.formattedLocation }}<br />
+  {{ jobResults.source }}<br />
+  {{ jobResults.date }}<br />
+  {{ jobResults.snippet }}<br />
+  {{ jobResults.url }}<br />
+  {{ jobResults.onmousedown }}<br />
+  {{ jobResults.latitude }}<br />
+  {{ jobResults.longitude }}<br />
+  {{ jobResults.jobkey }}<br />
+  {{ jobResults.sponsored }}<br />
+  {{ jobResults.expired }}<br />
+  {{ jobResults.indeedApply }}<br />
+  {{ jobResults.formattedLocationFull }}<br />
+  {{ jobResults.formattedRelativeTime }}<br />
+  {{ jobResults.stations }}<br />
 </p>
