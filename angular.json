@@ -61,8 +61,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "DenverNurses:build",
-            "proxyConfig": "proxy.conf.json"
+            "browserTarget": "DenverNurses:build"
+            
           },
           "configurations": {
             "production": {
