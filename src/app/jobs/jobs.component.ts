@@ -19,7 +19,8 @@ export class JobsComponent implements OnInit {
   }
 
   getJobs(): void {
-    this.jobService.getJobs()
+    var searchterm = "nurse";
+    this.jobService.getJobs(searchterm)
     .subscribe(jobResults => this.jobResults = jobResults);
   }
 }

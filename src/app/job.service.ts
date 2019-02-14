@@ -10,14 +10,14 @@ import { JobResult } from './jobResults';
 })
 export class JobService {
 
-  private jobsUrl = 'http://localhost:8000/api/jobResults';  // URL to web api
+  private jobsUrl = 'http://localhost:8000/api/jobResults/';  // URL to web api
 
   constructor(
     private http: HttpClient) {}
 
   /** GET jobs from the server */
-  getJobs (): Observable<JobResult[]> {
-    return this.http.get<JobResult[]>(this.jobsUrl)
+  getJobs (searchterm: string): Observable<JobResult[]> {
+    return this.http.get<JobResult[]>(this.jobsUrl+searchterm)
     .pipe(
       catchError(this.handleError('getJobs', []))
     );
